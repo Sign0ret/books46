@@ -254,5 +254,9 @@ INSERT INTO books (title, author, isbn, publication_year, genre, pages) VALUES (
 INSERT INTO books (title, author, isbn, publication_year, genre, pages) VALUES ('Oryx and Crake', 'Margaret Atwood', '9780385721677', 2003, 'Dystopian', 376);
 INSERT INTO books (title, author, isbn, publication_year, genre, pages) VALUES ('The Year of the Flood', 'Margaret Atwood', '9780385528771', 2009, 'Dystopian', 431);
 INSERT INTO books (title, author, isbn, publication_year, genre, pages) VALUES ('MaddAddam', 'Margaret Atwood', '9780385528788', 2013, 'Dystopian', 416);
+INSERT INTO patrons (first_name, last_name, email, phone_number, address, city, state, zip_code, date_of_birth, membership_status) 
+VALUES ('Juan', 'Pérez', 'juan.perez@example.com', '+5215551234567', 'Av. Vallarta 101', 'Guadalajara', 'Jalisco', '44100', TO_DATE('1990-01-01', 'YYYY-MM-DD'), 'Active');
 
+INSERT INTO patrons (first_name, last_name, email, phone_number, address, city, state, zip_code, date_of_birth) 
+VALUES ('Sofia', 'Hernández', 'sofia.hernandez@example.com', '+5213339876543', 'Calle Hidalgo 456', 'Zapopan', 'Jalisco', '45100', TO_DATE('1985-07-15', 'YYYY-MM-DD'));
 COMMIT;

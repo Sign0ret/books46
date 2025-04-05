@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import java.sql.Timestamp;
 
 @Entity
 @Table(name = "books") // This specifies the table name in the database
@@ -39,8 +38,6 @@ public class Book {
     @Min(1) // Minimum value for the number of pages
     private Integer pages;
 
-    @Column(name = "created_at", nullable = false, insertable = false, updatable = false)
-    private Timestamp createdAt; // Timestamp for when the book was created
 
     // Getters and Setters
     public Long getId() {
@@ -97,10 +94,6 @@ public class Book {
 
     public void setPages(Integer pages) {
         this.pages = pages;
-    }
-
-    public Timestamp getCreatedAt() {
-        return createdAt;
     }
 
     // createdAt does not need a setter because it's auto-generated
