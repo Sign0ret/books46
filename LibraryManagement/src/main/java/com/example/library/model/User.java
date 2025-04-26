@@ -12,6 +12,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
+
 @Entity
 @Table(name = "users")
 public class User {
@@ -47,6 +48,16 @@ public class User {
 
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
+
+    public User() {
+        // Default constructor required by JPA
+    }
+
+    public User(String username, String password, String email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
 
     // Getters and Setters
     public Long getId() {

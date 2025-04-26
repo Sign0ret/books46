@@ -6,4 +6,6 @@ import com.example.library.model.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
     // Métodos de consulta adicionales pueden ser definidos aquí si se necesitan
+    User findByUsername(String username);
+    boolean existsByUsername(String username);
 }
