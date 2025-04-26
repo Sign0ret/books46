@@ -1,5 +1,6 @@
 /home/sign0ret/dev/student/oracle-semester/web/LibraryApi/LibraryManagement/src/main/java/com/example/library/model/User.java
 /home/sign0ret/dev/student/oracle-semester/web/LibraryApi/LibraryManagement/src/main/java/com/example/library/security/AuthEntryPointJwt.java
+/home/sign0ret/dev/student/oracle-semester/web/LibraryApi/LibraryManagement/src/main/java/com/example/library/config/OpenApiConfig.java
 /home/sign0ret/dev/student/oracle-semester/web/LibraryApi/LibraryManagement/src/main/java/com/example/library/service/CustomUserDetailsService.java
 /home/sign0ret/dev/student/oracle-semester/web/LibraryApi/LibraryManagement/src/main/java/com/example/library/repository/UserRepository.java
 /home/sign0ret/dev/student/oracle-semester/web/LibraryApi/LibraryManagement/src/main/java/com/example/library/LibraryApplication.java
