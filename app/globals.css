@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 30 10% 15%;
+    --card: 40 33% 98%;
+    --card-foreground: 30 10% 15%;
+    --popover: 40 33% 98%;
+    --popover-foreground: 30 10% 15%;
+    --primary: 25 30% 30%;
+    --primary-foreground: 40 33% 98%;
+    --secondary: 30 15% 94%;
+    --secondary-foreground: 30 10% 15%;
+    --muted: 30 15% 94%;
+    --muted-foreground: 30 10% 40%;
+    --accent: 30 15% 94%;
+    --accent-foreground: 30 10% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 33% 98%;
+    --border: 30 15% 90%;
+    --input: 30 15% 90%;
+    --ring: 25 30% 30%;
+    --radius: 0.25rem;
+  }
+
+  .dark {
+    --background: 30 10% 10%;
+    --foreground: 40 33% 90%;
+    --card: 30 10% 10%;
+    --card-foreground: 40 33% 90%;
+    --popover: 30 10% 10%;
+    --popover-foreground: 40 33% 90%;
+    --primary: 25 30% 60%;
+    --primary-foreground: 30 10% 10%;
+    --secondary: 30 10% 15%;
+    --secondary-foreground: 40 33% 90%;
+    --muted: 30 10% 15%;
+    --muted-foreground: 30 10% 60%;
+    --accent: 30 10% 15%;
+    --accent-foreground: 40 33% 90%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 33% 90%;
+    --border: 30 10% 20%;
+    --input: 30 10% 20%;
+    --ring: 25 30% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif tracking-wide;
+  }
+}
+
+@layer components {
+  .classical-card {
+    @apply bg-parchment-50 dark:bg-marble-900/30;
+    @apply border border-marble-200 dark:border-marble-800;
+    @apply shadow-sm;
+  }
+
+  .classical-input {
+    @apply border-marble-300 dark:border-marble-700;
+    @apply bg-parchment-50 dark:bg-marble-900/30;
+    @apply focus:border-terracotta-500 focus:ring-terracotta-500/20;
+  }
+
+  .classical-button {
+    @apply bg-terracotta-800 hover:bg-terracotta-900 text-parchment-50;
+    @apply dark:bg-terracotta-700 dark:hover:bg-terracotta-800;
+    @apply border border-terracotta-900 dark:border-terracotta-800;
+  }
+
+  .classical-button-outline {
+    @apply border border-marble-300 dark:border-marble-700;
+    @apply text-terracotta-800 dark:text-terracotta-500;
+    @apply hover:bg-marble-100 dark:hover:bg-marble-800/50;
+  }
+
+  .ornament {
+    @apply relative;
+  }
+
+  .ornament::before,
+  .ornament::after {
+    content: "•";
+    @apply absolute top-1/2 transform -translate-y-1/2 text-terracotta-500 opacity-70;
+  }
+
+  .ornament::before {
+    @apply -left-4;
+  }
+
+  .ornament::after {
+    @apply -right-4;
+  }
+
+  .divider {
+    @apply relative flex items-center py-4;
+  }
+
+  .divider::before,
+  .divider::after {
+    content: "";
+    @apply flex-grow border-t border-marble-300 dark:border-marble-700;
+  }
+
+  .divider-text {
+    @apply px-4 text-marble-500 dark:text-marble-400 text-sm uppercase tracking-widest;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-parchment-100 dark:bg-marble-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-terracotta-300 dark:bg-terracotta-800 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-terracotta-400 dark:bg-terracotta-700;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.2s ease-in-out;
+}
