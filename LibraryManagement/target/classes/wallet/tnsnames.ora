@@ -1,0 +1,8 @@
+books_high = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.mx-queretaro-1.oraclecloud.com))(connect_data=(service_name=gc6a22811b16a4b_books_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+books_low = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.mx-queretaro-1.oraclecloud.com))(connect_data=(service_name=gc6a22811b16a4b_books_low.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+books_medium = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.mx-queretaro-1.oraclecloud.com))(connect_data=(service_name=gc6a22811b16a4b_books_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+
+
